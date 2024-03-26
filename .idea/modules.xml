@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/HKT1MD2/HKT1MD2.iml" filepath="$PROJECT_DIR$/HKT1MD2/HKT1MD2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HN_JV230313_BS_AnhTon/HN_JV230313_BS_AnhTon.iml" filepath="$PROJECT_DIR$/HN_JV230313_BS_AnhTon/HN_JV230313_BS_AnhTon.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MD2.iml" filepath="$PROJECT_DIR$/MD2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/OOP/OOP.iml" filepath="$PROJECT_DIR$/OOP/OOP.iml" />
+      <module fileurl="file://$PROJECT_DIR$/OOPpractice/OOPpractice.iml" filepath="$PROJECT_DIR$/OOPpractice/OOPpractice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/demo/demo.iml" filepath="$PROJECT_DIR$/demo/demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/session1/trenlop/session01/session01.iml" filepath="$PROJECT_DIR$/session1/trenlop/session01/session01.iml" />
+      <module fileurl="file://$PROJECT_DIR$/session05/session05.iml" filepath="$PROJECT_DIR$/session05/session05.iml" />
+      <module fileurl="file://$PROJECT_DIR$/session08- tinh ke thua/session08- tinh ke thua.iml" filepath="$PROJECT_DIR$/session08- tinh ke thua/session08- tinh ke thua.iml" />
+      <module fileurl="file://$PROJECT_DIR$/session09-tinh truu tuong/session09-tinh truu tuong.iml" filepath="$PROJECT_DIR$/session09-tinh truu tuong/session09-tinh truu tuong.iml" />
+      <module fileurl="file://$PROJECT_DIR$/session10-cleancode/session10-cleancode.iml" filepath="$PROJECT_DIR$/session10-cleancode/session10-cleancode.iml" />
+      <module fileurl="file://$PROJECT_DIR$/session11-genericandcollection/session11-genericandcollection.iml" filepath="$PROJECT_DIR$/session11-genericandcollection/session11-genericandcollection.iml" />
+      <module fileurl="file://$PROJECT_DIR$/session12/session12.iml" filepath="$PROJECT_DIR$/session12/session12.iml" />
+      <module fileurl="file://$PROJECT_DIR$/session2/session2.iml" filepath="$PROJECT_DIR$/session2/session2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/session3/session3.iml" filepath="$PROJECT_DIR$/session3/session3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/session6- String/session6- String.iml" filepath="$PROJECT_DIR$/session6- String/session6- String.iml" />
+      <module fileurl="file://$PROJECT_DIR$/session1/trenlop/untitled/untitled.iml" filepath="$PROJECT_DIR$/session1/trenlop/untitled/untitled.iml" />
+    </modules>
+  </component>
+</project>
