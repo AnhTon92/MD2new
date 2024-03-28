@@ -1,5 +1,6 @@
 package ontapbuoi2.ra.entity;
 
+import javax.sound.midi.MidiFileFormat;
 import java.util.Scanner;
 
 public class Categories {
@@ -8,7 +9,7 @@ public class Categories {
    private int catalogId;
    private String catalogName;
    private String descriptions;
-   private Boolean catalogStatus = true;
+   private Boolean catalogStatus;
    //2. Các constructor
 
     public Categories() {
@@ -67,6 +68,17 @@ public class Categories {
         this.catalogName = catalogNameInput;
         System.out.println("nhập mô tả danh mục");
         this.descriptions = scanner.nextLine();
+        this.catalogStatus = inputCatalogStatus(scanner);
+    }
+    public boolean inputCatalogStatus(Scanner scanner) {
+        do {
+            String status = scanner.nextLine();
+            if (status.equals("true") || status.equals("false")){
+                return Boolean.parseBoolean(status);
+            }else {
+                System.err.println("sai, vui long nhap lai");
+            }
+        } while(true);
     }
     //4.2 hiển thị thông tin
     public void displayData () {

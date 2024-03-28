@@ -180,7 +180,7 @@ public class ShopManagement {
                     }
                     break;
                 case 4:
-                    System.out.println("Nhap ma muốn sửa");
+                    System.out.println("Nhap mã muốn sửa");
                     String idEdit = scanner.nextLine();
                     for (int i = 0; i < indexProduct; i++) {
                         if (arrProduct[i].getProductId().equals(idEdit)) {
@@ -202,7 +202,7 @@ public class ShopManagement {
                             arrProduct[i] = arrProduct[i + 1];
                         }
                         indexProduct--;
-                        System.out.println("Đã xóa sản pẩm có id " + idDelete);
+                        System.out.println("Đã xóa sản ph ẩm có id " + idDelete);
                     } else {
                         System.out.println("Ko tìm thấy id " + idDelete);
                     }
