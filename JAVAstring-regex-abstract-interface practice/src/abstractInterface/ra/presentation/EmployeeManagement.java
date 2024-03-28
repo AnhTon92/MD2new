@@ -7,7 +7,7 @@ import java.util.Arrays;
 import java.util.Comparator;
 import java.util.Scanner;
 
-public class EmployeeManagement {
+public class  EmployeeManagement {
     public Employee[] employees = new Employee[100];
     private int numEmployees = 0;
     public static void main(String[] args) {
