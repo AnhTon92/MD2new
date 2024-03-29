@@ -63,6 +63,7 @@ public class Department {
     }
 
     public void inputData(List<Department> departmentList) {
+
         this.name = getInputName(departmentList);
     }
 
