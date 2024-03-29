@@ -20,7 +20,7 @@ private static final List<Integer> catalogIds = new ArrayList<>(); //tạo List
         if (catalogIds.isEmpty()){
             this.catalogId = 1;
         } else {
-            this.catalogId = catalogIds.get(catalogIds.size()-1)+ 1;
+            this.catalogId = catalogIds.get(catalogIds.size())+ 1;
         }
         catalogIds.add(this.catalogId);
     }

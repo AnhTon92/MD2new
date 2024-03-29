@@ -75,7 +75,7 @@ public class Product {
     }
 
     public int getCatalogId() {
-        return catalogId;
+        return catalogId.getCatalogId();
     }
 
     public void setCatalogId(Categories catalogId) {

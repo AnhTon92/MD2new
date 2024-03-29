@@ -3,6 +3,7 @@ package ra.impl;
 import ra.design.IProduct;
 import ra.entity.Categories;
 import ra.entity.Product;
+import ra.entity.ProductStatus;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -44,7 +45,7 @@ public class ProductImp implements IProduct {
     public void update() {
         System.out.println("Hãy chọn sản phẩm muốn update");
         int id = Integer.parseInt(new Scanner(System.in).nextLine());
-        Product edit = findbyId(id);
+        Product edit = findbyId(String.valueOf(id));
         if (edit == null) {
             System.err.println("id không tim thấy");
             return;
@@ -59,6 +60,11 @@ public class ProductImp implements IProduct {
     }
 
     @Override
+    public Product changeStatusById(Integer id) {
+        return null;
+    }
+
+    @Override
     public Product findbyId(String id) {
         for (Product p : productList) {
             if (p.getProductId().equals(id))
@@ -68,8 +74,31 @@ public class ProductImp implements IProduct {
     }
 
     @Override
-    public Product changeStatusById(Integer id) {
-        return null;
+    public void deletebyId(String id) {
+        Product productToDelete = findbyId(id);
+        if (productToDelete != null) {
+            productList.remove(productToDelete);
+            System.out.println("Sản phẩm đã được xóa thành công.");
+        } else {
+            System.err.println("Không tìm thấy sản phẩm với ID: " + id);
+        }
+    }
+
+
+
+
+
+
+    @Override
+    public Product changeStatusById(int id) {
+        Product productToChange = findbyId(String.valueOf(id));
+        if (productToChange != null) {
+            productToChange.setProductStatus(productToChange.getProductStatus() == ProductStatus.ACTIVE ? ProductStatus.INACTIVE : ProductStatus.ACTIVE);
+            System.out.println("Trạng thái sản phẩm đã được thay đổi.");
+        } else {
+            System.err.println("Không tìm thấy sản phẩm với ID: " + id);
+        }
+        return productToChange;
     }
 
     @Override
@@ -97,6 +126,27 @@ public class ProductImp implements IProduct {
 
     @Override
     public void sortProductByPrice() {
+        productList.sort((p1, p2) -> Float.compare(p1.getPrice(), p2.getPrice()));
+        System.out.println("Danh sách sản phẩm sau khi sắp xếp theo giá:");
+        displayAll();
 
+    }
+    public void searchProductsByPriceRange() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Nhập giá thấp nhất (a): ");
+        float minPrice = scanner.nextFloat();
+        System.out.print("Nhập giá cao nhất (b): ");
+        float maxPrice = scanner.nextFloat();
+
+        List<Product> productsInRange = productList.stream()
+                .filter(product -> product.getPrice() >= minPrice && product.getPrice() <= maxPrice)
+                .collect(Collectors.toList());
+
+        if (productsInRange.isEmpty()) {
+            System.out.println("Không có sản phẩm nào trong khoảng giá từ " + minPrice + " đến " + maxPrice);
+        } else {
+            System.out.println("Sản phẩm trong khoảng giá từ " + minPrice + " đến " + maxPrice + ":");
+            productsInRange.forEach(Product::displayData);
+        }
     }
 }

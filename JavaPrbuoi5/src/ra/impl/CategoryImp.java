@@ -93,7 +93,7 @@ public class CategoryImp implements ICategories {
             return;
         }
 
-        if (hasProducts(categoryToDelete)) {
+        if (hasProducts(categoryToDelete.getCatalogId())) {
             System.err.println("Danh mục chứa sản phẩm, không thể xóa.");
         } else {
             categoriesList.remove(categoryToDelete);
@@ -102,14 +102,13 @@ public class CategoryImp implements ICategories {
 
     }
 
-    private boolean hasProducts(Categories categoryToDelete) {
+    private boolean hasProducts(int catalogId) {
         for (Product product : productList) {
-            if (product.getCatalogId() categoryToDelete) {
-                return true; // Danh mục có chứa ít nhất một sản phẩm
+            if (product.getCatalogId() == catalogId) {
+                return true;
             }
+
         }
-        return false; // Danh mục không chứa sản phẩm nào
+        return false;
     }
 }
-
-
