@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.Scanner;
 
 public class BookManager {
+
     private List<Book> books;
     private static final String FILE_PATH = "C:\\rikkei\\MD2\\session18-File\\books.bin";
 
@@ -66,6 +67,7 @@ public class BookManager {
         int option;
 
         do {
+            System.out.println("hồ");
             System.out.println("\nBook Manager");
             System.out.println("1. Add Book");
             System.out.println("2. Update Book");
