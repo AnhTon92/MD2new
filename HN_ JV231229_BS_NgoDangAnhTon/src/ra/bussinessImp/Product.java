@@ -4,7 +4,7 @@ import ra.bussiness.IProduct;
 
 import java.util.Scanner;
 
-public class Product implements IProduct {
+public class Product implements IProduct, Comparable<Product> {
     // các thuộc tính
     private int productId;
     private String productName;
@@ -126,6 +126,11 @@ public class Product implements IProduct {
         System.out.println("Export Price: " + exportPrice);
         System.out.println("Interest: " + interest);
         System.out.println("Product Status: " + (productStatus ? "Active" : "Inactive"));
+    }
+// tạo pt compare để dùng comparable
+    @Override
+    public int compareTo(Product o) {
+        return Float.compare(this.interest, o.interest);
     }
 }
 

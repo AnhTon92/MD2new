@@ -2,10 +2,7 @@ package ra.run;
 
 import ra.bussinessImp.Product;
 
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 
 public class ProductManagement {
     private List<Product> productList = new ArrayList<>();// tạo list productlist để chạy các chức năng và lưu trữ
@@ -83,9 +80,8 @@ public class ProductManagement {
     }
 
     // phương thức sắp xếp theo lợi nhuận sp
-    private void sortProductsByInterest() { // dùng hàm sort cho productList sau đó dùng comparator để so sánh giá trị
-        //interest của các sp.
-        productList.sort(Comparator.comparing(Product::getInterest));
+    private void sortProductsByInterest() {
+        Collections.sort(productList);
     }
 
     // phương thức hiển thị sản phẩm
